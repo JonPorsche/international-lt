@@ -1,4 +1,82 @@
 ﻿<div class="dashboard game-connected">
-<!--    <div class="_speed"><span class="truck-speedRounded"></span>km/h</div>-->
+    <div class="bkg-elements" id="gauge-center-shadows"></div>
+    <div class="bkg-elements" id="gauge-center-right"></div>
+    <div class="bkg-elements" id="gauge-center-left"></div>
+    <div class="bkg-elements" id="bkg-layer-1"></div>
+    <div class="bkg-elements" id="bkg-layer-0"></div>
     <div class="statusMessage"></div>
+    <div class="truck-waterTemperature" data-type="meter" data-min="100" data-max="300" data-min-angle="-45"
+         data-max-angle="45">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 135">
+            <g id="gauges" data-name="gauges small bottom">
+                <polygon id="gauge-water-temperature" points="8.14 0 3.86 0 0 135 12 135 8.14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-airPressure" data-type="meter" data-min="0" data-max="150" data-min-angle="-45"
+         data-max-angle="45">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 135">
+            <g id="gauges" data-name="gauges small bottom">
+                <polygon id="gauge-air-pressure" points="8.14 0 3.86 0 0 135 12 135 8.14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-airPressure2" data-type="meter" data-min="0" data-max="150" data-min-angle="-45"
+         data-max-angle="45">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 135">
+            <g id="gauges" data-name="gauges small bottom">
+                <polygon id="gauge-air-pressure-2" points="8.14 0 3.86 0 0 135 12 135 8.14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-fuel" data-type="meter" data-min="0" data-max="truck.fuelCapacity" data-min-angle="-45"
+         data-max-angle="45">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 135">
+            <g id="gauges" data-name="gauges small bottom">
+                <polygon id="gauge-fuel" points="8.14 0 3.86 0 0 135 12 135 8.14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-engineRpm" data-type="meter" data-min="0" data-max="25" data-min-angle="-107.5"
+         data-max-angle="+107.5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 291.89">
+            <g id="gauges">
+                <polygon id="gauge-rpm-1" points="18.02 0.69 14 0 12 0 4 291.89 26 291.89 18.02 0.69"/>
+                <polygon id="gauge-rpm-2" points="14 0 8 0 0 291.89 22 291.89 14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-speedMph" data-type="meter" data-min="0" data-max="85" data-min-angle="-107.5"
+         data-max-angle="+107.5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 291.89">
+            <g id="gauges">
+                <polygon id="gauge-speed-1" points="7.98 0.69 12 0 14 0 22 291.89 0 291.89 7.98 0.69"/>
+                <polygon id="gauge-speed-2" points="18 0 12 0 4 291.89 26 291.89 18 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-oilPressure" data-type="meter" data-min="0" data-max="100" data-min-angle="-45"
+         data-max-angle="45">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 135">
+            <g id="gauges" data-name="gauges small bottom">
+                <polygon id="gauge-oil-pressure" points="8.14 0 3.86 0 0 135 12 135 8.14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="truck-adblue" data-type="meter" data-min="0" data-max="truck.adblueCapacity"
+         data-min-angle="-45" data-max-angle="45">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 135">
+            <g id="gauges" data-name="gauges small bottom">
+                <polygon id="gauge-adblue" points="8.14 0 3.86 0 0 135 12 135 8.14 0"/>
+            </g>
+        </svg>
+    </div>
+    <div id="scales-1"></div>
+    <div id="scales-2"></div>
+    <div id="scales-3"></div>
+    <div id="dash-computer">
+        <div class="truck-speedRounded"></div>
+        <span class="debug-span" id="brightValue"></span>
+        <span class="debug-span" id="hour"></span>
+    </div>
 </div>

@@ -1,0 +1,774 @@
+{
+  "game": {
+    "connected": true,
+    "gameName": "ATS",
+    "paused": true,
+    "time": "0001-06-25T17:33:00Z",
+    "timeScale": 3.0,
+    "nextRestStopTime": "0001-01-01T11:59:00Z",
+    "version": "1.4",
+    "telemetryPluginVersion": "10",
+    "telemetryServerVersion": "4.1.2.3",
+    "maxTrailerCount": 10
+  },
+  "truck": {
+    "id": "kenworth",
+    "make": "Kenworth",
+    "model": "T800",
+    "speed": -0.00518133724,
+    "cruiseControlSpeed": 0.0,
+    "cruiseControlOn": false,
+    "odometer": 1801.28333,
+    "shifterType": "hshifter",
+    "forwardGears": 18,
+    "reverseGears": 4,
+    "gear": 0,
+    "displayedGear": 0,
+    "engineRpm": 600.001,
+    "engineRpmMax": 2120.0,
+    "fuel": 54.1496277,
+    "fuelCapacity": 988.0,
+    "fuelAverageConsumption": 0.5203972,
+    "fuelWarningFactor": 0.15,
+    "fuelWarningOn": true,
+    "wearEngine": 0.00389111182,
+    "wearTransmission": 0.00327627384,
+    "wearCabin": 0.00245935051,
+    "wearChassis": 0.00307418755,
+    "wearWheels": 0.0240008831,
+    "userSteer": 0.00259403372,
+    "userThrottle": 0.0,
+    "userBrake": 0.0,
+    "userClutch": 0.0,
+    "gameSteer": 0.00259403372,
+    "gameThrottle": 1.401298E-45,
+    "gameBrake": 0.0,
+    "gameClutch": 0.0,
+    "engineOn": true,
+    "electricOn": true,
+    "wipersOn": true,
+    "retarderBrake": 0,
+    "retarderStepCount": 3,
+    "parkBrakeOn": false,
+    "motorBrakeOn": false,
+    "brakeTemperature": 127.223572,
+    "adblue": 93.30748,
+    "adblueCapacity": 140.0,
+    "adblueAverageConsumption": 0.0,
+    "adblueWarningOn": false,
+    "airPressure": 104.529922,
+    "airPressureWarningOn": false,
+    "airPressureWarningValue": 59.16,
+    "airPressureEmergencyOn": false,
+    "airPressureEmergencyValue": 29.58,
+    "oilTemperature": 78.0198746,
+    "oilPressure": 39.5454865,
+    "oilPressureWarningOn": false,
+    "oilPressureWarningValue": 10.15,
+    "waterTemperature": 62.67481,
+    "waterTemperatureWarningOn": false,
+    "waterTemperatureWarningValue": 105.0,
+    "batteryVoltage": 27.3812523,
+    "batteryVoltageWarningOn": false,
+    "batteryVoltageWarningValue": 23.76,
+    "lightsDashboardValue": 1.0,
+    "lightsDashboardOn": true,
+    "blinkerLeftActive": false,
+    "blinkerRightActive": false,
+    "blinkerLeftOn": false,
+    "blinkerRightOn": false,
+    "lightsParkingOn": true,
+    "lightsBeamLowOn": true,
+    "lightsBeamHighOn": false,
+    "lightsAuxFrontOn": true,
+    "lightsAuxRoofOn": true,
+    "lightsBeaconOn": true,
+    "lightsBrakeOn": false,
+    "lightsReverseOn": false,
+    "placement": {
+      "x": -29532.895629882813,
+      "y": 235.67803955078125,
+      "z": -54373.867370605469,
+      "heading": 0.42813357710838318,
+      "pitch": -0.00129659753292799,
+      "roll": 0.00020323606440797448
+    },
+    "acceleration": {
+      "x": -0.0044839154,
+      "y": -0.00167565711,
+      "z": -0.00358148245
+    },
+    "head": {
+      "x": -0.38762033,
+      "y": -0.457089663,
+      "z": 0.341939926
+    },
+    "cabin": {
+      "x": 0.0,
+      "y": 2.9,
+      "z": -2.0
+    },
+    "hook": {
+      "x": 0.0,
+      "y": 0.9999981,
+      "z": 2.70397162
+    },
+    "licensePlate": "MZ JP 85",
+    "licensePlateCountryId": "nevada",
+    "licensePlateCountry": "Nevada",
+    "wheelCount": 6,
+    "wheels": [
+      {
+        "simulated": true,
+        "steerable": true,
+        "powered": false,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.508,
+        "position": {
+          "x": -1.06134927,
+          "y": 0.5353783,
+          "z": -3.321902
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": true,
+        "powered": false,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.508,
+        "position": {
+          "x": 1.06134927,
+          "y": 0.5353783,
+          "z": -3.321902
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": true,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.502,
+        "position": {
+          "x": -0.9603542,
+          "y": 0.536081731,
+          "z": 2.11965728
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": true,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.502,
+        "position": {
+          "x": 0.9603542,
+          "y": 0.536081731,
+          "z": 2.11965728
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": true,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.502,
+        "position": {
+          "x": -0.9603542,
+          "y": 0.536081,
+          "z": 3.463947
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": true,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.502,
+        "position": {
+          "x": 0.9603542,
+          "y": 0.536081,
+          "z": 3.463947
+        }
+      }
+    ]
+  },
+  "shifter": {
+    "type": "hshifter",
+    "forwardGears": 18,
+    "forwardGearNames": [
+      "N",
+      "CL",
+      "CH",
+      "1L",
+      "1H",
+      "2L",
+      "2H",
+      "3L",
+      "3H",
+      "4L",
+      "4H",
+      "5L",
+      "5H",
+      "6L",
+      "6H",
+      "7L",
+      "7H",
+      "8L",
+      "8H"
+    ],
+    "reverseGears": 4,
+    "reverseGearNames": [
+      "N",
+      "R1L",
+      "R1H",
+      "R2L",
+      "R2H"
+    ],
+    "differentialRatio": 3.25,
+    "forwardGearRatios": [
+      14.4,
+      12.29,
+      8.51,
+      7.26,
+      6.05,
+      5.16,
+      4.38,
+      3.74,
+      3.2,
+      2.73,
+      2.28,
+      1.94,
+      1.62,
+      1.38,
+      1.17,
+      1.0,
+      0.86,
+      0.73
+    ],
+    "reverseGearRatios": [
+      -15.06,
+      -12.85,
+      -4.03,
+      -3.43
+    ],
+    "tyreCircumference": 3.1541588624171162,
+    "forwardSpeedAt1500Rpm": [
+      0,
+      6,
+      7,
+      10,
+      12,
+      14,
+      17,
+      20,
+      23,
+      27,
+      32,
+      38,
+      45,
+      54,
+      63,
+      75,
+      87,
+      102,
+      120
+    ],
+    "reverseSpeedAt1500Rpm": [
+      0,
+      -6,
+      -7,
+      -22,
+      -25
+    ],
+    "forwardRpmAtCurrentSpeed": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "reverseRpmAtCurrentSpeed": [
+      0,
+      -1,
+      -1,
+      0,
+      0
+    ],
+    "selectorCount": 4,
+    "slotCount": 8,
+    "slots": [
+      {
+        "slot": 0,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 1,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 2,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 3,
+            "gear": 0,
+            "gearName": "N"
+          }
+        ]
+      },
+      {
+        "slot": 1,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": -1,
+            "gearName": "R1L"
+          },
+          {
+            "selector": 1,
+            "gear": -3,
+            "gearName": "R2L"
+          },
+          {
+            "selector": 2,
+            "gear": -2,
+            "gearName": "R1H"
+          },
+          {
+            "selector": 3,
+            "gear": -4,
+            "gearName": "R2H"
+          }
+        ]
+      },
+      {
+        "slot": 2,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 1,
+            "gearName": "CL"
+          },
+          {
+            "selector": 1,
+            "gear": 11,
+            "gearName": "5L"
+          },
+          {
+            "selector": 2,
+            "gear": 2,
+            "gearName": "CH"
+          },
+          {
+            "selector": 3,
+            "gear": 12,
+            "gearName": "5H"
+          }
+        ]
+      },
+      {
+        "slot": 3,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 3,
+            "gearName": "1L"
+          },
+          {
+            "selector": 1,
+            "gear": 13,
+            "gearName": "6L"
+          },
+          {
+            "selector": 2,
+            "gear": 4,
+            "gearName": "1H"
+          },
+          {
+            "selector": 3,
+            "gear": 14,
+            "gearName": "6H"
+          }
+        ]
+      },
+      {
+        "slot": 4,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 5,
+            "gearName": "2L"
+          },
+          {
+            "selector": 1,
+            "gear": 15,
+            "gearName": "7L"
+          },
+          {
+            "selector": 2,
+            "gear": 6,
+            "gearName": "2H"
+          },
+          {
+            "selector": 3,
+            "gear": 16,
+            "gearName": "7H"
+          }
+        ]
+      },
+      {
+        "slot": 5,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 7,
+            "gearName": "3L"
+          },
+          {
+            "selector": 1,
+            "gear": 17,
+            "gearName": "8L"
+          },
+          {
+            "selector": 2,
+            "gear": 8,
+            "gearName": "3H"
+          },
+          {
+            "selector": 3,
+            "gear": 18,
+            "gearName": "8H"
+          }
+        ]
+      },
+      {
+        "slot": 6,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 9,
+            "gearName": "4L"
+          },
+          {
+            "selector": 1,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 2,
+            "gear": 10,
+            "gearName": "4H"
+          },
+          {
+            "selector": 3,
+            "gear": 0,
+            "gearName": "N"
+          }
+        ]
+      },
+      {
+        "slot": 7,
+        "seletors": [
+          {
+            "selector": 0,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 1,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 2,
+            "gear": 0,
+            "gearName": "N"
+          },
+          {
+            "selector": 3,
+            "gear": 0,
+            "gearName": "N"
+          }
+        ]
+      }
+    ],
+    "gear": 0,
+    "displayedGear": 0,
+    "displayedGearName": "N",
+    "gearRatio": 0.0,
+    "slot": 0,
+    "selector": 2,
+    "bestGear": 1,
+    "bestGearName": "CL"
+  },
+  "trailerCount": 1,
+  "trailers": [
+    {
+      "number": 0,
+      "attached": false,
+      "present": true,
+      "id": "vehicle.dorsey.giant",
+      "name": "Dorsey Aluminum Giant",
+      "wearWheels": 0.0166562572,
+      "wearChassis": 0.0166562572,
+      "wear": 0.0166562572,
+      "cargoDamage": 0.0,
+      "cargoAccessoryId": "",
+      "brandId": "dorsey",
+      "brand": "",
+      "bodyType": "algiant",
+      "cargo": "algiant",
+      "licensePlate": "  TV2501",
+      "licensePlateCountry": "Idaho",
+      "licensePlateCountryId": "idaho",
+      "chainType": "single",
+      "placement": {
+        "x": -32613.827697753906,
+        "y": 239.64726257324219,
+        "z": -47352.946136474609,
+        "heading": 0.16077403724193573,
+        "pitch": 0.0012096264399588108,
+        "roll": 0.0022218984086066484
+      },
+      "distance": 7667.17,
+      "hook": {
+        "x": 0.0,
+        "y": 1.04341316,
+        "z": -6.57022524
+      },
+      "wheelCount": 4,
+      "wheels": [
+        {
+          "simulated": true,
+          "steerable": false,
+          "powered": false,
+          "liftable": true,
+          "lifted": false,
+          "radius": 0.5350001,
+          "position": {
+            "x": -0.924798131,
+            "y": 0.640369654,
+            "z": 4.27151346
+          }
+        },
+        {
+          "simulated": true,
+          "steerable": false,
+          "powered": false,
+          "liftable": true,
+          "lifted": false,
+          "radius": 0.5350001,
+          "position": {
+            "x": 0.924798131,
+            "y": 0.640369654,
+            "z": 4.27151346
+          }
+        },
+        {
+          "simulated": true,
+          "steerable": false,
+          "powered": false,
+          "liftable": false,
+          "lifted": false,
+          "radius": 0.5350001,
+          "position": {
+            "x": -0.92449,
+            "y": 0.640369534,
+            "z": 7.733317
+          }
+        },
+        {
+          "simulated": true,
+          "steerable": false,
+          "powered": false,
+          "liftable": false,
+          "lifted": false,
+          "radius": 0.5350001,
+          "position": {
+            "x": 0.92449,
+            "y": 0.640369534,
+            "z": 7.733317
+          }
+        }
+      ]
+    }
+  ],
+  "trailer": {
+    "number": 0,
+    "attached": false,
+    "present": true,
+    "id": "vehicle.dorsey.giant",
+    "name": "Dorsey Aluminum Giant",
+    "wearWheels": 0.0166562572,
+    "wearChassis": 0.0166562572,
+    "wear": 0.0166562572,
+    "cargoDamage": 0.0,
+    "cargoAccessoryId": "",
+    "brandId": "dorsey",
+    "brand": "",
+    "bodyType": "algiant",
+    "cargo": "algiant",
+    "licensePlate": "  TV2501",
+    "licensePlateCountry": "Idaho",
+    "licensePlateCountryId": "idaho",
+    "chainType": "single",
+    "placement": {
+      "x": -32613.827697753906,
+      "y": 239.64726257324219,
+      "z": -47352.946136474609,
+      "heading": 0.16077403724193573,
+      "pitch": 0.0012096264399588108,
+      "roll": 0.0022218984086066484
+    },
+    "distance": 7667.17,
+    "hook": {
+      "x": 0.0,
+      "y": 1.04341316,
+      "z": -6.57022524
+    },
+    "wheelCount": 4,
+    "wheels": [
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": false,
+        "liftable": true,
+        "lifted": false,
+        "radius": 0.5350001,
+        "position": {
+          "x": -0.924798131,
+          "y": 0.640369654,
+          "z": 4.27151346
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": false,
+        "liftable": true,
+        "lifted": false,
+        "radius": 0.5350001,
+        "position": {
+          "x": 0.924798131,
+          "y": 0.640369654,
+          "z": 4.27151346
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": false,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.5350001,
+        "position": {
+          "x": -0.92449,
+          "y": 0.640369534,
+          "z": 7.733317
+        }
+      },
+      {
+        "simulated": true,
+        "steerable": false,
+        "powered": false,
+        "liftable": false,
+        "lifted": false,
+        "radius": 0.5350001,
+        "position": {
+          "x": 0.92449,
+          "y": 0.640369534,
+          "z": 7.733317
+        }
+      }
+    ]
+  },
+  "job": {
+    "income": 0,
+    "deadlineTime": "0001-01-01T00:00:00Z",
+    "remainingTime": "0001-01-01T00:00:00Z",
+    "sourceCity": "",
+    "sourceCompany": "",
+    "destinationCity": "",
+    "destinationCompany": "",
+    "specialTransport": false,
+    "jobMarket": ""
+  },
+  "cargo": {
+    "cargoLoaded": false,
+    "cargoId": "",
+    "cargo": "",
+    "mass": 0.0,
+    "unitMass": 0.0,
+    "unitCount": 0,
+    "damage": 0.0
+  },
+  "navigation": {
+    "estimatedTime": "0001-01-01T00:00:00Z",
+    "estimatedDistance": 0,
+    "speedLimit": 0
+  },
+  "finedEvent": {
+    "fineOffense": "avoid_weighing",
+    "fineAmount": 700,
+    "fined": false
+  },
+  "jobEvent": {
+    "jobFinished": false,
+    "jobCancelled": false,
+    "jobDelivered": false,
+    "cancelPenalty": 0,
+    "revenue": 0,
+    "earnedXp": 0,
+    "cargoDamage": 0.0,
+    "distance": 0,
+    "deliveryTime": "0001-01-01T14:00:00Z",
+    "autoparkUsed": false,
+    "autoloadUsed": false
+  },
+  "tollgateEvent": {
+    "tollgateUsed": false,
+    "payAmount": 0
+  },
+  "ferryEvent": {
+    "ferryUsed": false,
+    "sourceName": "",
+    "targetName": "",
+    "sourceId": "",
+    "targetId": "",
+    "payAmount": 0
+  },
+  "trainEvent": {
+    "trainUsed": false,
+    "sourceName": "",
+    "targetName": "",
+    "sourceId": "",
+    "targetId": "",
+    "payAmount": 0
+  }
+}

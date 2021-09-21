@@ -27,12 +27,64 @@ body {
   cursor: pointer;
 }
 
-.dashboard {
+/*.dashboard {
 	background-image: url("images/bg-off.jpg");
-}
+}*/
 
 .dashboard.game-connected.yes {
-	background-image: url("images/bg-on.jpg");
+	width: 100%;
+    height: 100%;
+}
+
+/* BACKGROUND ELEMENTS */
+
+.bkg-elements{
+    position: absolute;
+    background-repeat: no-repeat;
+    filter: brightness(1);
+}
+
+#bkg-layer-1{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-image: url("images/png/bkg-layer-1.png");
+}
+
+#bkg-layer-0 {
+    width: 84.17%;
+    height: 55%;
+    z-index: 0;
+    left: 7.956%;
+    top: 18.562%;
+    background-image: url("images/png/bkg-layer-0.png");
+}
+
+#gauge-center-left{
+    width: 7.914%;
+    height: 11.55%;
+    left: 11.725%;
+    top: 49.876%;
+    z-index: 7;
+    background-image: url("images/png/gauge-center-left.png");
+}
+
+#gauge-center-right{
+    width: 8.082%;
+    height: 11.742%;
+    left: 79.899%;
+    top: 49.814%;
+    z-index: 7;
+    background-image: url("images/png/gauge-center-right.png");
+}
+
+#gauge-center-shadows{
+    width: 78.098%;
+    height: 14.462%;
+    left: 11.348%;
+    top: 48.084%;
+    z-index: 6;
+    background-image: url("images/png/gauge-center-shadows.png");
 }
 
 ._speed {
@@ -56,8 +108,252 @@ body {
     line-height: 1152px;
 }
 
+.truck-speedMph[data-type="meter"] {
+    visibility: visible;
+    position: absolute;
+    left: 83.417%;
+    top: 37.5%;
+    width: 26px;
+    height: 292px;
+    z-index: 5 ;
+    /*background-image: url("images/svg/arrow-big-right.svg");*/
+    -webkit-transform: rotate(-107.5deg);
+    -moz-transform: rotate(-107.5deg);
+    -ms-transform: rotate(-107.5deg);
+    -o-transform: rotate(-107.5deg);
+    transform: rotate(-107.5deg);
+    -webkit-transform-origin: 50% 292px;
+    -moz-transform-origin: 50% 292px;
+    -ms-transform-origin: 50% 292px;
+    -o-transform-origin: 50% 292px;
+    transform-origin: 50% 292px;
+}
+
+.truck-engineRpm {
+    position: absolute;
+    left: 15.196%;
+    top: 37.5%;
+    width: 26px;
+    height: 292px;
+    z-index: 5;
+    /*background-image: url("images/svg/arrow-big-left.svg");*/
+    -webkit-transform: rotate(-107.5deg);
+    -moz-transform: rotate(-107.5deg);
+    -ms-transform: rotate(-107.5deg);
+    -o-transform: rotate(-107.5deg);
+    transform: rotate(-107.5deg);
+    -webkit-transform-origin: 50% 292px;
+    -moz-transform-origin: 50% 292px;
+    -ms-transform-origin: 50% 292px;
+    -o-transform-origin: 50% 292px;
+    transform-origin: 50% 292px;
+}
+
+.gauges-small{
+    /*background-image: url("images/svg/arrow-small.svg");*/
+    fill: #ff0000;
+}
+
+/* GAUGES TOP */
+
+.truck-waterTemperature {
+    position: absolute;
+    left: 24.12%;
+    top: 26%;
+    width: 12px;
+    height: 135px;
+    z-index: 2;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 135px;
+    -moz-transform-origin: 50% 135px;
+    -ms-transform-origin: 50% 135px;
+    -o-transform-origin: 50% 135px;
+    transform-origin: 50% 135px;
+}
+
+.truck-airPressure {
+    position: absolute;
+    left: 41.038%;
+    top: 26%;
+    width: 12px;
+    height: 135px;
+    z-index: 2;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 135px;
+    -moz-transform-origin: 50% 135px;
+    -ms-transform-origin: 50% 135px;
+    -o-transform-origin: 50% 135px;
+    transform-origin: 50% 135px;
+}
+
+.truck-airPressure2 {
+    position: absolute;
+    left: 57.956%;
+    top: 26%;
+    width: 12px;
+    height: 135px;
+    z-index: 2;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 135px;
+    -moz-transform-origin: 50% 135px;
+    -ms-transform-origin: 50% 135px;
+    -o-transform-origin: 50% 135px;
+    transform-origin: 50% 135px;
+}
+
+.truck-fuel {
+    position: absolute;
+    left: 74.874%;
+    top: 26%;
+    width: 12px;
+    height: 135px;
+    z-index: 2;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 135px;
+    -moz-transform-origin: 50% 135px;
+    -ms-transform-origin: 50% 135px;
+    -o-transform-origin: 50% 135px;
+    transform-origin: 50% 135px;
+}
+
+/* GAUGES BOTTOM */
+
+.truck-oilPressure {
+    position: absolute;
+    left: 16.792%;
+    top: 67.367%;
+    width: 12px;
+    height: 135px;
+    z-index: 2;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 135px;
+    -moz-transform-origin: 50% 135px;
+    -ms-transform-origin: 50% 135px;
+    -o-transform-origin: 50% 135px;
+    transform-origin: 50% 135px;
+}
+
+.truck-adblue {
+    position: absolute;
+    left: 82.914%;
+    top: 67.367%;
+    width: 12px;
+    height: 135px;
+    z-index: 2;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 135px;
+    -moz-transform-origin: 50% 135px;
+    -ms-transform-origin: 50% 135px;
+    -o-transform-origin: 50% 135px;
+    transform-origin: 50% 135px;
+}
+
+/* GAUGES */
+
+#gauge-rmp-1 #gauge-speed-1 #gauge-oil-pressure #gauge-adblue #gauge-water-temperature #gauge-air-pressure #gauge-air-pressure-2 #gauge-fuel{
+    fill: #ff0000;
+}
+
+#gauge-rpm-2 #gauge-speed-2{
+    fill: #ff3636;
+}
+
+/* SCALES */
+
+#scales-1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("images/SVG/scales-1.svg");
+}
+
+#scales-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-image: url("images/SVG/scales-2.svg");
+}
+
+#scales-3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background-image: url("images/SVG/scales-3.svg");
+}
+
+#dash-computer{
+    position: absolute;
+    visibility: visible;
+    width: 28.224%;
+    height: 25.03%;
+    left: 35.678%;
+    top: 43.757%;
+    z-index: 0;
+    background-image: url("images/png/dash-computer.png");
+    background-size: 100% 100%;
+}
+
+.debug-span{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 1.5em;
+}
+
+#brightValue{
+    width: 23.145%;
+    height: 9.135%;
+    left: 76.5%;
+    top:88%;
+}
+
+#hour{
+    width: 23.145%;
+    height: 9.135%;
+    left:5%;
+    top:5%;
+}
+
 .truck-speedRounded {
-    color: green;
+    position: absolute;
+    width: 30%;
+    height: 90px;
+    left: 35%;
+    top: 33.5%;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 9em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
 }
 
 .game-connected.yes .statusMessage {
