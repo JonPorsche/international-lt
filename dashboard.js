@@ -2,6 +2,16 @@
 
 const minBrightness = 0.1;
 const maxBrightness = 1.0;
+const fps = 60;
+const brightGap = maxBrightness - minBrightness;
+const variationHourGap = 3;
+const dawnStart = 5;
+const dawnEnd = dawnStart + variationHourGap;
+const nightfallStart = 18;
+const nightfallEnd = nightfallStart + variationHourGap;
+let maxFpsVariationGap;
+let timeScale;
+let countDashIlluminationCalls = 0;
 
 function dashLights(electricOn) {
     const svgGaugeRpm1 = document.getElementById('gauge-rpm-1');
@@ -55,31 +65,47 @@ function dashLights(electricOn) {
     }
 }
 
-function getBrightVariationFactor(timeScale){
-    const brightGap = maxBrightness - minBrightness;
-    const fps = 60;
-    // console.log(`timeScale = ${timeScale} brightGap = ${brightGap}; Bright variation factor = ${brightVariationFactor}`);
-    return brightGap / (60 / timeScale * 60 * fps);
+function getBrightVariationFactor(){
+    // console.log(`timeScale = ${timeScale} brightGap = ${brightGap};`);
+    maxFpsVariationGap = 60 / timeScale * variationHourGap * 60 * fps;
+    console.log(`maxFpsVariationGap = ${maxFpsVariationGap}`);
+    return brightGap / maxFpsVariationGap;
 }
 
-function setBrightness(brightValue) {
+function getStartBrightness(hour, min, endHour){
+    let startBrightValue;
+    console.log(`timeScale = ${timeScale}`);
+    const fpsGapToEnd = (((endHour - hour) * 60 - min) / timeScale) * 60 * fps;
+    const brightValueToSum = (maxFpsVariationGap - fpsGapToEnd) * getBrightVariationFactor();
+    if(endHour > 12) startBrightValue = maxBrightness - brightValueToSum;
+    else startBrightValue = minBrightness + brightValueToSum;
+    console.log(`fpsGapToMax = ${fpsGapToEnd}; brightValueToSum = ${brightValueToSum}; startBrightValue = ${startBrightValue}`);
+    return startBrightValue;
+}
+
+function changeBrightness(brightValue) {
     $('.bkg-elements').css('filter', `brightness(${brightValue})`);
 }
 
 /*  Changes the dashboard ilumination according to the current day hour.
     Affects only background images.
  */
-function dashIlumination(hour, brightValue, variation) {
-    if (hour >= 5 && hour < 8) {
-        if(brightValue < maxBrightness) setBrightness(brightValue + variation);
-    } else if (hour >= 8 && hour < 18) {
-        if(brightValue != maxBrightness) setBrightness(maxBrightness);
-    } else if (hour >= 18 && hour < 21) {
-        if (brightValue > minBrightness) setBrightness(brightValue - variation);
-        else setBrightness(minBrightness);
-    } else if (hour >= 21 && hour < 5) {
-        if(brightValue != minBrightness) setBrightness(minBrightness);
+function dashIllumination(hour, min, brightValue, variation) {
+    console.log(`dashIllumination called ${countDashIlluminationCalls} times`);
+
+    if (hour >= dawnStart && hour < dawnEnd) {
+        if(countDashIlluminationCalls === 0) brightValue = getStartBrightness(hour, min, dawnEnd);
+        if(brightValue < maxBrightness) changeBrightness(brightValue + variation);
+    } else if (hour >= dawnEnd && hour < nightfallStart) {
+        if(brightValue != maxBrightness) changeBrightness(maxBrightness);
+    } else if (hour >= nightfallStart && hour < nightfallEnd) {
+        if(countDashIlluminationCalls === 0) brightValue = getStartBrightness(hour, min, nightfallEnd);
+        if (brightValue > minBrightness) changeBrightness(brightValue - variation);
+        else changeBrightness(minBrightness);
+    } else if (hour >= nightfallEnd && hour < dawnStart) {
+        if(brightValue != minBrightness) changeBrightness(minBrightness);
     }
+    countDashIlluminationCalls++;
 }
 
 Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, utils) {
@@ -148,19 +174,22 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             let regexp = '[\\d\\.]+';
             const brightValue = parseFloat(brightness.match(regexp));
 
+            timeScale = data.game.timeScale;
             const gameTime = data.game.time;
             regexp = '\\b\\d+(?=[^\\d<]*:\\d+)';
             const hour = parseInt(gameTime.match(regexp));
+            regexp = '[^:]*$';
+            const min = parseInt(gameTime.match(regexp));
             const variation = getBrightVariationFactor(data.game.timeScale);
 
             // Rounded just for debug output purposes
             const roundBrightValue = brightValue.toFixed(8);
 
-            console.log(`Game time: ${gameTime}; Extracted hour: ${hour}; Brightness value: ${brightValue}`);
+            // console.log(`Game time: ${gameTime}; hour: ${hour}; min: ${min}; Brightness value: ${brightValue}`);
             document.getElementById("brightValue").textContent=roundBrightValue;
-            document.getElementById("hour").textContent=hour;
+            document.getElementById("hour").textContent=hour.toString();
 
-            dashIlumination(hour, brightValue, variation);
+            dashIllumination(hour, min, brightValue, variation);
         }
     });
 }
