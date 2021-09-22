@@ -13,7 +13,7 @@ let maxFpsVariationGap;
 let timeScale;
 let countDashIlluminationCalls = 0;
 
-function dashLights(electricOn) {
+function dashLights(lightsDashboardOn) {
     const svgGaugeRpm1 = document.getElementById('gauge-rpm-1');
     const svgGaugeRpm2 = document.getElementById('gauge-rpm-2');
     const svgGaugeSpeed1 = document.getElementById('gauge-speed-1');
@@ -30,7 +30,7 @@ function dashLights(electricOn) {
     const colorOff1 = '#350b0b';
     const colorOff2 = '#670d0d';
 
-    if (!electricOn) {
+    if (!lightsDashboardOn) {
         svgGaugeRpm1.style.fill = colorOff1;
         svgGaugeRpm2.style.fill = colorOff2;
         svgGaugeSpeed1.style.fill = colorOff1;
@@ -168,7 +168,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             // we don't have anything custom to render in this skin,
             // but you may use jQuery here to update DOM or CSS
 
-            dashLights(data.truck.electricOn);
+            dashLights(data.truck.lightsDashboardOn);
 
             const brightness = $('.bkg-elements').css('filter');
             let regexp = '[\\d\\.]+';
