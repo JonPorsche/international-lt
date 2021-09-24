@@ -375,3 +375,49 @@ body {
     bottom: 0;
     color: orange;
 }
+
+#icons-1{
+    position: absolute;
+    display: flex;
+    width: 45.686%;
+    height: 5.006%;
+    top: 34.61%;
+    left: 26.716%;
+    z-index: 8;
+}
+
+#icons-2{
+    position: absolute;
+    display: flex;
+    color: #00bdff;
+    width: 49.455%;
+    height: 3.708%;
+    top: 74.042%;
+    left: 25.272%;
+    z-index: 8;
+}
+
+.icons-1-outer-icons{
+    /*border: 1px solid white;*/
+}
+
+#icons, table{
+    width: 100%;
+    /*border:1px solid orange;*/
+}
+
+.truck-parkBrakeOn.yes{
+    background-image: url("images/SVG/park-on.svg");
+}
+
+.truck-blinkerRightOn.yes{
+    background-image: url("images/SVG/blinker-right.svg");
+}
+
+.truck-blinkerLeftOn.yes{
+    background-image: url("images/SVG/blinker-left.svg");
+}
+
+.truck-lightsBeamHighOn.yes{
+    background-image: url("images/SVG/lights-beam-high.svg");
+}
