@@ -308,9 +308,9 @@ body {
     background-image: url("images/SVG/scales-3.svg");
 }
 
-#dash-computer{
+.truck-electricOn{
     position: absolute;
-    visibility: visible;
+    visibility: hidden;
     width: 28.224%;
     height: 25.03%;
     left: 35.678%;
@@ -318,6 +318,10 @@ body {
     z-index: 0;
     background-image: url("images/png/dash-computer.png");
     background-size: 100% 100%;
+}
+
+.truck-electricOn.yes{
+    visibility: visible;
 }
 
 .debug-span{
