@@ -401,9 +401,17 @@ body {
     /*border: 1px solid white;*/
 }
 
-#icons, table{
+table{
     width: 100%;
     /*border:1px solid orange;*/
+}
+
+#icons-1 tr{
+    height: 80px;
+}
+
+#icons-2 tr{
+    height:60px;
 }
 
 .truck-parkBrakeOn.yes{
@@ -421,3 +429,23 @@ body {
 .truck-lightsBeamHighOn.yes{
     background-image: url("images/SVG/lights-beam-high.svg");
 }
+
+.truck-cruiseControlOn.yes{
+    background-image: url("images/SVG/cruise-control.svg");
+}
+
+.truck-batteryVoltageWarningOn.yes{
+    background-image: url("images/SVG/battery-voltage-warning.svg");
+}
+
+.truck-motorBrakeOn.yes{
+    position: absolute;
+    width: 3.978%;
+    height: 3.708%;
+    left: 28.371%;
+    top: 69.221%;
+    z-index: 8;
+    background-image: url("images/SVG/motor-brake.svg");
+}
+
+.truck-differentialLock

@@ -2,7 +2,7 @@
 
 const minBrightness = 0.1;
 const maxBrightness = 1;
-const fps = 5;
+const fps = 6;
 const brightGap = maxBrightness - minBrightness;
 const variationHourGap = 3;
 const dawnStart = 5;
@@ -155,7 +155,6 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             // convert rpm to rpm * 100
             data.truck.engineRpm = data.truck.engineRpm / 100;
             // return changed data to the core for rendering
-
             return data;
         };
 
