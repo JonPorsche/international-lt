@@ -194,7 +194,7 @@ body {
     transform-origin: 50% 135px;
 }
 
-.truck-airPressure2 {
+#truck-airPressure2 {
     position: absolute;
     left: 57.956%;
     top: 26%;
@@ -448,4 +448,49 @@ table{
     background-image: url("images/SVG/motor-brake.svg");
 }
 
-.truck-differentialLock
+.warning-lights{
+    position: absolute;
+
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1;
+    border: 1px solid red;
+}
+
+.truck-waterTemperatureWarningOn.yes{
+    background-color: #db3b39;
+    left: 17.483%;
+    top: 27.472%;
+}
+
+.truck-airPressureWarningOn.yes{
+    background-color: #db3b39;
+    left: 34.191%;
+    top: 27.472%;
+}
+
+.truck-airPressureWarningOn.yes:nth-of-type(2n){
+    background-color: #db3b39;
+    left: 51.193%;
+    top: 27.472%;
+}
+
+.truck-fuelWarningOn.yes{
+    background-color: #d89600;
+    left: 68.278%;
+    top: 27.472%;
+}
+
+.truck-oilPressureWarningOn.yes{
+    background-color: #db3b39;
+    left: 23.073%;
+    top: 66.687%;
+}
+
+.truck-adblueWarningOn.yes{
+    background-color: #d89600;
+    left: 76.402%;
+    top: 66.687%;
+}
