@@ -330,20 +330,22 @@ body {
     color: white;
     font-family: "Arial", sans-serif;
     font-size: 1.5em;
+    z-index: 3;
+    color: gray;
 }
 
 #brightValue{
     width: 23.145%;
     height: 9.135%;
-    left: 76.5%;
-    top:88%;
+    left: 69%;
+    top:95%;
 }
 
 #hour{
     width: 23.145%;
     height: 9.135%;
-    left:5%;
-    top:5%;
+    left:21%;
+    top:95%;
 }
 
 .truck-speedRounded {
@@ -493,4 +495,30 @@ table{
     background-color: #d89600;
     left: 76.402%;
     top: 66.687%;
+}
+
+#gear-modes{
+    position: absolute;
+    display: grid;
+    left: 2.373%;
+    top: 25.5%;
+    width: 4%;
+    height: 53%;
+}
+
+.gear-mode{
+    margin-top: 20%;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    /*color: #7190bd;*/
+}
+
+.truck-gear{
+    color: white;
+    display: block;
+    width: 11%;
+    margin-left: 11%;
+    margin-top: 52%;
 }

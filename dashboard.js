@@ -65,19 +65,19 @@ function dashLights(lightsParkingOn) {
     }
 }
 
-function getBrightVariationFactor(){
+function getBrightVariationFactor() {
     // console.log(`timeScale = ${timeScale} brightGap = ${brightGap};`);
     maxFpsVariationGap = 60 / timeScale * variationHourGap * 60 * fps;
     // console.log(`maxFpsVariationGap = ${maxFpsVariationGap}`);
     return brightGap / maxFpsVariationGap;
 }
 
-function getStartBrightness(hour, min, endHour){
+function getStartBrightness(hour, min, endHour) {
     let startBrightValue;
     // console.log(`timeScale = ${timeScale}`);
     const fpsGapToEnd = (((endHour - hour) * 60 - min) / timeScale) * 60 * fps;
     const brightValueToSum = (maxFpsVariationGap - fpsGapToEnd) * getBrightVariationFactor();
-    if(endHour > 12) startBrightValue = maxBrightness - brightValueToSum;
+    if (endHour > 12) startBrightValue = maxBrightness - brightValueToSum;
     else startBrightValue = minBrightness + brightValueToSum;
     // console.log(`fpsGapToMax = ${fpsGapToEnd}; brightValueToSum = ${brightValueToSum}; startBrightValue = ${startBrightValue}`);
     return startBrightValue;
@@ -94,25 +94,37 @@ function dashIllumination(hour, min, brightValue, variation) {
     // console.log(`dashIllumination called ${countDashIlluminationCalls} times`);
 
     if (hour >= dawnStart && hour < dawnEnd) {
-        if(countDashIlluminationCalls === 0) brightValue = getStartBrightness(hour, min, dawnEnd);
-        if(brightValue < maxBrightness) changeBrightness(brightValue + variation);
+        if (countDashIlluminationCalls === 0) brightValue = getStartBrightness(hour, min, dawnEnd);
+        if (brightValue < maxBrightness) changeBrightness(brightValue + variation);
     } else if (hour >= dawnEnd && hour < nightfallStart) {
-        if(brightValue != maxBrightness) changeBrightness(maxBrightness);
+        if (brightValue != maxBrightness) changeBrightness(maxBrightness);
     } else if (hour >= nightfallStart && hour < nightfallEnd) {
-        if(countDashIlluminationCalls === 0) brightValue = getStartBrightness(hour, min, nightfallEnd);
+        if (countDashIlluminationCalls === 0) brightValue = getStartBrightness(hour, min, nightfallEnd);
         if (brightValue > minBrightness) changeBrightness(brightValue - variation);
         else changeBrightness(minBrightness);
     } else if (hour >= nightfallEnd && hour < dawnStart) {
-        if(brightValue != minBrightness) changeBrightness(minBrightness);
+        if (brightValue != minBrightness) changeBrightness(minBrightness);
     }
     countDashIlluminationCalls++;
 }
 
-function retarderDashLight(retarderValue){
-    if(retarderValue > 0){
+function retarderDashLight(retarderValue) {
+    if (retarderValue > 0) {
         let element = document.getElementById('motorBrake');
         element.classList.add('yes');
     }
+}
+
+function gearMode(gear) {
+    const onColor = '#66ed8f';
+    const offColor = '#7190bd';
+
+    if (gear === 'N') $('#neutral').css('color', onColor);
+    else $('#neutral').css('color', offColor);
+    if (gear === 'R') $('#reverse').css('color', onColor);
+    else $('#reverse').css('color', offColor);
+    if (gear != 'N' && gear != 'R') $('#forward').css('color', onColor);
+    else $('#forward').css('color', offColor);
 }
 
 Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, utils) {
@@ -192,11 +204,12 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             const roundBrightValue = brightValue.toFixed(8);
 
             // console.log(`Game time: ${gameTime}; hour: ${hour}; min: ${min}; Brightness value: ${brightValue}`);
-            document.getElementById("brightValue").textContent=roundBrightValue;
-            document.getElementById("hour").textContent=hour.toString();
+            document.getElementById("brightValue").textContent = roundBrightValue;
+            document.getElementById("hour").textContent = hour.toString();
 
             dashIllumination(hour, min, brightValue, variation);
             retarderDashLight(data.truck.retarderBrake);
+            gearMode(data.truck.gear);
         }
     });
 }
