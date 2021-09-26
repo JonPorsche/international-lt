@@ -178,7 +178,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             // convert kg to t
             data.trailer.mass = (data.trailer.mass / 1000.0) + 't';
             // format odometer data as: 00000.0
-            data.truck.odometer = utils.formatFloat(data.truck.odometer, 1);
+            data.truck.odometer = utils.formatFloat(data.truck.odometer, 3);
             // convert gear to readable format
             data.truck.gear = data.truck.gear > 0 ? 'D' + data.truck.gear : (data.truck.gear < 0 ? 'R' : 'N');
             // convert rpm to rpm * 100
@@ -186,6 +186,8 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             // return changed data to the core for rendering
 
             data.truck.cruiseControlSpeed = parseInt(data.truck.cruiseControlSpeed);
+            data.truck.batteryVoltage = utils.formatFloat(data.truck.batteryVoltage, 1);
+
 
             return data;
         };
@@ -223,7 +225,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             dashIllumination(hour, min, brightValue, variation);
             retarderDashLight(data.truck.retarderBrake);
             gearMode(data.truck.gear);
-            console.log(data.truck.odometer);
+            console.log(data.truck.batteryVoltage);
             cruiseControlSpeed(data.truck.cruiseControlSpeed, data.truck.cruiseControlOn);
         }
     });

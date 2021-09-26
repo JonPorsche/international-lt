@@ -508,11 +508,6 @@ table{
 
 .gear-mode{
     margin-top: 20%;
-    text-align: center;
-    font-family: "Arial", sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-    /*color: #7190bd;*/
 }
 
 .truck-gear{
@@ -537,14 +532,32 @@ table{
 }
 
 #cruise-control-speed{
-    color: white;
-    font-family: "Arial", sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-    text-align: center;
     margin-left: 21%;
 }
 
 #page1{
     display: flex;
+}
+
+.truck-odometer{
+    position: absolute;
+    width: 28%;
+    height: 10%;
+    margin-left: 36%;
+    margin-top: 49%;
+}
+
+.computer-text-medium{
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.truck-batteryVoltage{
+    position: absolute;
+    width: 11%;
+    height: 10%;
+    margin-left: 81%;
 }
