@@ -522,3 +522,29 @@ table{
     margin-left: 11%;
     margin-top: 52%;
 }
+
+#cruise-control{
+    position: absolute;
+    visibility: hidden;
+    width: 17.655%;
+    height: 13.592%;
+    left: 67.359%;
+    top: 83.827%;
+    background-image: url("images/png/cruise-control-truck.png");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#cruise-control-speed{
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 21%;
+}
+
+#page1{
+    display: flex;
+}

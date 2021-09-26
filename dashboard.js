@@ -127,6 +127,16 @@ function gearMode(gear) {
     else $('#forward').css('color', offColor);
 }
 
+function cruiseControlSpeed(speed, cruiseControlOn){
+    if(cruiseControlOn){
+        $('#cruise-control').css('visibility', 'visible');
+        $("#cruise-control-speed").text(speed);
+    } else {
+        $('#cruise-control').css('visibility', 'hidden');
+        // $("#cruise-control-speed").text(speed);
+    }
+}
+
 Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, utils) {
     $.getScript(`skins/${skinConfig.name}/js/TelemetryManager.js`, function () {
         //
@@ -174,6 +184,9 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             // convert rpm to rpm * 100
             data.truck.engineRpm = data.truck.engineRpm / 100;
             // return changed data to the core for rendering
+
+            data.truck.cruiseControlSpeed = parseInt(data.truck.cruiseControlSpeed);
+
             return data;
         };
 
@@ -210,6 +223,8 @@ Funbit.Ets.Telemetry.Dashboard.prototype.initialize = function (skinConfig, util
             dashIllumination(hour, min, brightValue, variation);
             retarderDashLight(data.truck.retarderBrake);
             gearMode(data.truck.gear);
+            console.log(data.truck.odometer);
+            cruiseControlSpeed(data.truck.cruiseControlSpeed, data.truck.cruiseControlOn);
         }
     });
 }
