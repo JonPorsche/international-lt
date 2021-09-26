@@ -237,7 +237,7 @@ body {
 .truck-oilPressure {
     position: absolute;
     left: 16.792%;
-    top: 67.367%;
+    top: 65.367%;
     width: 12px;
     height: 135px;
     z-index: 2;
@@ -256,7 +256,7 @@ body {
 .truck-adblue {
     position: absolute;
     left: 82.914%;
-    top: 67.367%;
+    top: 65.367%;
     width: 12px;
     height: 135px;
     z-index: 2;
